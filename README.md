@@ -3,10 +3,7 @@
 Please provide your source code, and any test code/data
 you using in developing your solution.
 
-Please send your submission to us via email as a zip file or
-as a link to the repository hosting your code. (If you choose to keep your
-repository private, contact us about adding us to your repository
-as collaborators.) Do not create a pull request against this repository.
+Do not create a pull request against this repository.
 
 Please engineer your solution to a standard you consider
 suitable for production.
@@ -52,7 +49,8 @@ This can be in any form, but standard output is sufficient.
 
 * A robot that is not on the table can choose
 to ignore the `MOVE`, `LEFT`, `RIGHT` and `REPORT` commands.
-* Input can be from a file, or from standard input, as the developer chooses.
+* Input can be from a file. In this case filename has to be taken from command line arguments.
+* If filename is not given input has to be taken from "Standard Input".
 * Provide test data to exercise the application.
 * It is not required to provide any graphical output
 showing the movement of the toy robot.
