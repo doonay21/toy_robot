@@ -11,7 +11,7 @@ suitable for production.
 ## Description
 
 * The application is a simulation of a toy robot moving
-on a square tabletop, of dimensions 5 units x 5 units.
+on a square tabletop, of dimensions set up with first command, eg. 5 units by 5 units.
 * There are no other obstructions on the table surface.
 * The robot is free to roam around the surface of the table,
 but must be prevented from falling to destruction.
@@ -24,6 +24,7 @@ valid movement commands must still be allowed.
 Create an application that can read in commands of the following form:
 
 ```
+SIZE W,H
 PLACE X,Y,F
 MOVE
 LEFT
@@ -31,10 +32,15 @@ RIGHT
 REPORT
 ```
 
+* `SIZE` will set the boad dimensions W (width) and H (height)
+* The first valid command to the robot is a `SIZE` command.
+The application should discard all commands in the sequence
+until a valid `SIZE `command has been executed.
+* `SIZE` can be executed only once, any other `SIZE` commands shoul be discarded.
 * `PLACE` will put the toy robot on the table in position X,Y
 and facing `NORTH`, `SOUTH`, `EAST` or `WEST`.
 * The origin (0,0) can be considered to be the `SOUTH WEST` most corner.
-* The first valid command to the robot is a `PLACE` command,
+* The second valid command to the robot is a `PLACE` command,
 after that, any sequence of commands may be issued, in any order,
 including another `PLACE` command.
 The application should discard all commands in the sequence
