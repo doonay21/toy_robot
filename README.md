@@ -32,7 +32,8 @@ RIGHT
 REPORT
 ```
 
-* `SIZE` will set the boad dimensions W (width) and H (height)
+* `SIZE` will set the board dimensions W (width) and H (height)
+* W and H arguments for `SIZE` command have to be in 2..9 range
 * The first valid command to the robot is a `SIZE` command.
 The application should discard all commands in the sequence
 until a valid `SIZE `command has been executed.
